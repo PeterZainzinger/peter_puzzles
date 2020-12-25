@@ -4,9 +4,9 @@ import BaseTest
 import assertNumber
 import org.junit.jupiter.api.Test
 import shared.splitLines
-import y2020.Aoc2020D08.execute
 import y2020.Aoc2020D08.Instruction
 import y2020.Aoc2020D08.ProgramState
+import y2020.Aoc2020D08.execute
 
 class Y2020Day08Test : BaseTest<List<Instruction>>(2020, 8) {
 
@@ -31,8 +31,9 @@ class Y2020Day08Test : BaseTest<List<Instruction>>(2020, 8) {
         val input = getInput()
         val altPrograms = input.mapIndexed { index, instruction ->
             when (instruction) {
-                is Instruction.Jump -> input.toMutableList()
-                    .apply { set(index, Instruction.NoOp(instruction.jumpToLine)) }
+                is Instruction.Jump ->
+                    input.toMutableList()
+                        .apply { set(index, Instruction.NoOp(instruction.jumpToLine)) }
                 is Instruction.NoOp -> input.toMutableList().apply { set(index, Instruction.Jump(instruction.value)) }
                 else -> null
             }
@@ -41,5 +42,4 @@ class Y2020Day08Test : BaseTest<List<Instruction>>(2020, 8) {
         val res = execute(targetProgram, ProgramState()).acc
         assertNumber(672, res)
     }
-
 }

@@ -27,5 +27,4 @@ class Y2020Day05Test : BaseTest<List<Aoc2020D05.Line>>(2020, 5) {
         val res = Aoc2020D05.exercise2(input)
         assertNumber(714, res.first()!!)
     }
-
 }

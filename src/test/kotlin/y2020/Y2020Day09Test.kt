@@ -6,7 +6,6 @@ import org.junit.jupiter.api.Test
 import shared.splitLines
 import y2020.Aoc2020D09.findContinousSum
 import y2020.Aoc2020D09.findNonMatching
-import java.io.File
 
 class Y2020Day09Test : BaseTest<List<Long>>(2020, 9) {
 
@@ -27,5 +26,4 @@ class Y2020Day09Test : BaseTest<List<Long>>(2020, 9) {
         val res = cs.minOrNull()!! + cs.maxOrNull()!!
         assertNumber(1766397, res)
     }
-
 }

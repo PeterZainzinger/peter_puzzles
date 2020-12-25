@@ -38,5 +38,4 @@ class Y2019Day03Test : BaseTest<List<List<Aoc2019D03.WireEdge>>>(2019, 3) {
         val closesPointEnergy = Aoc2019D03.energyEffiecientPoint(inputA, inputB)
         assertNumber(35038, closesPointEnergy)
     }
-
 }

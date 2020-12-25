@@ -39,5 +39,4 @@ class Y2020Day07Test : BaseTest<List<Pair<String, List<Pair<Int, String>>>>>(202
         val res = countChilds(input.toMap(), "shiny gold")
         assertNumber(1250, res)
     }
-
 }

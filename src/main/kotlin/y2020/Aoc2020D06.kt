@@ -15,7 +15,4 @@ object Aoc2020D06 {
 
     fun exercise1(input: List<List<String>>) = charactersOfAnswers(input, emptySet()) { a, b -> a union b }
     fun exercise2(input: List<List<String>>) = charactersOfAnswers(input, alphabet) { a, b -> a intersect b }
-
 }
-
-

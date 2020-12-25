@@ -17,5 +17,3 @@ object Aoc2020D07 {
             }.sum()
         }
 }
-
-

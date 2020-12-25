@@ -37,7 +37,4 @@ object Aoc2020D09 {
         }
         return null
     }
-
 }
-
-

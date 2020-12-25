@@ -1,6 +1,19 @@
+buildscript {
+    repositories {
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath "org.jlleitschuh.gradle:ktlint-gradle:<current_version>"
+    }
+}
+
 plugins {
     id 'org.jetbrains.kotlin.jvm' version '1.4.10'
+    id "org.jlleitschuh.gradle.ktlint" version "9.4.1"
 }
+
 
 group 'at.peteterzainzinger'
 version '1.0-SNAPSHOT'

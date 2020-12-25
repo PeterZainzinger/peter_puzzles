@@ -24,7 +24,6 @@ object Aoc2020D05 {
     private fun List<Int>.toInt() =
         Integer.parseInt(joinToString(""), 2)
 
-
     fun exercise1(input: List<Line>) =
         input.map { it.seatID() }.maxOrNull()
 
@@ -34,8 +33,4 @@ object Aoc2020D05 {
         val max = allIds.max()!!
         return (min..max).toSet().minus(allIds)
     }
-
-
 }
-
-

@@ -15,12 +15,8 @@ object Aoc2020D02 {
         fun isValidOther(): Boolean {
             val firstLetter = password[start - 1] == letter
             val secondLetter = password[end - 1] == letter
-            //xor
+            // xor
             return (firstLetter || secondLetter) && !(firstLetter && secondLetter)
         }
-
     }
-
 }
-
-

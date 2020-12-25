@@ -28,7 +28,4 @@ object Aoc2020D01 {
         }
         throw RuntimeException("not found")
     }
-
 }
-
-

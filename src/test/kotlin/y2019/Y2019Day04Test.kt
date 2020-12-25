@@ -23,5 +23,4 @@ class Y2019Day04Test : BaseTest<IntRange>(2019, 4) {
         val optionsB = Aoc2019D04.searchMore(options)
         assertNumber(635, optionsB.size)
     }
-
 }

@@ -12,10 +12,12 @@ class Y2019Day02Test : BaseTest<List<Int>>(2019, 2) {
     @Test
     fun part1() {
         val input = getInput()
-        val res = executeIntCode(input.toMutableList().apply {
-            set(1, 12)
-            set(2, 2)
-        }).first()
+        val res = executeIntCode(
+            input.toMutableList().apply {
+                set(1, 12)
+                set(2, 2)
+            }
+        ).first()
         assertNumber(3562624, res)
     }
 
@@ -30,10 +32,12 @@ class Y2019Day02Test : BaseTest<List<Int>>(2019, 2) {
     private fun findOutput(target: Int, program: List<Int>): Pair<Int, Int> {
         for (i in 0..99) {
             for (j in 0..99) {
-                val res = executeIntCode(program.toMutableList().apply {
-                    set(1, i)
-                    set(2, j)
-                }).first()
+                val res = executeIntCode(
+                    program.toMutableList().apply {
+                        set(1, i)
+                        set(2, j)
+                    }
+                ).first()
                 if (res == target) {
                     return i to j
                 }

@@ -13,7 +13,6 @@ object Aoc2020D03 {
         }
     }.sum()
 
-
     fun exercise2(lines: List<String>): Long {
         val res = listOf(
             1 to 1,
@@ -27,7 +26,4 @@ object Aoc2020D03 {
         }.fold(1L, { a, b -> a * b })
         return res
     }
-
 }
-
-

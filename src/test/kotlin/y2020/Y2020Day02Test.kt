@@ -9,7 +9,7 @@ class Y2020Day02Test : BaseTest<List<Aoc2020D02.PasswordLine>>(2020, 2) {
 
     override fun parseInput(input: String) = input.splitLines().map { input ->
         val splitted = input.split(":")
-        val firstSplitted = splitted[0].split(" ");
+        val firstSplitted = splitted[0].split(" ")
         val numbersSplitted = firstSplitted[0].split("-")
         Aoc2020D02.PasswordLine(
             start = Integer.parseInt(numbersSplitted[0]),
@@ -32,5 +32,4 @@ class Y2020Day02Test : BaseTest<List<Aoc2020D02.PasswordLine>>(2020, 2) {
         val res = input.filter { it.isValidOther() }.size
         assertNumber(688, res)
     }
-
 }

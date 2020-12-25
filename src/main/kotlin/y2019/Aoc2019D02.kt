@@ -3,7 +3,7 @@ package y2019
 object Aoc2019D02 {
 
     fun executeIntCode(input: List<Int>): List<Int> {
-        var currentIndex = 0;
+        var currentIndex = 0
         val currentState = input.toMutableList()
         while (currentIndex < input.size - 4) {
             val op = currentState[currentIndex]
@@ -22,6 +22,3 @@ object Aoc2019D02 {
         return currentState
     }
 }
-
-
-

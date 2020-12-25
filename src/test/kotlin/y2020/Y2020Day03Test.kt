@@ -22,5 +22,4 @@ class Y2020Day03Test : BaseTest<List<String>>(2020, 3) {
         val res = Aoc2020D03.exercise2(input)
         assertNumber(1744787392, res)
     }
-
 }

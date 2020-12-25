@@ -16,7 +16,6 @@ object Aoc2019D03 {
         val (intersects, a, b) = intersectionPoints(inputA, inputB)
         return intersects.map { (a.indexOf(it) to b.indexOf(it)) }.filterNot { (x, y) -> x == 0 || y == 0 }
             .map { it.first + it.second }.min()!!
-
     }
 
     fun closesIntersectionPoint(inputA: List<WireEdge>, inputB: List<WireEdge>): Point {
@@ -33,7 +32,6 @@ object Aoc2019D03 {
         val a = expandAllPointsBetweenPoints(listOf(Point.zero) + positionOfOp(inputA, Point.zero))
         val b = expandAllPointsBetweenPoints(listOf(Point.zero) + positionOfOp(inputB, Point.zero))
         return a.toSet().intersect(b.toSet()).filterNot { it == Point.zero } then a then b
-
     }
 
     private fun positionOfOp(input: List<WireEdge>, currentPos: Point): List<Point> {

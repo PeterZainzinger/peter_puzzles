@@ -31,5 +31,4 @@ class Y2020Day04Test : BaseTest<List<Aoc2020D04.Passport>>(2020, 4) {
         val res = input.filter { it.validStrict() }.size
         assertNumber(147, res)
     }
-
 }
