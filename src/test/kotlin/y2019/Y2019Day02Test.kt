@@ -3,9 +3,9 @@ package y2019
 import BaseTest
 import assertNumber
 import org.junit.jupiter.api.Test
-import y2019.Aoc2019D2.executeIntCode
+import y2019.Aoc2019D02.executeIntCode
 
-class Y2019Day2Test : BaseTest<List<Int>>(2019, 2) {
+class Y2019Day02Test : BaseTest<List<Int>>(2019, 2) {
 
     override fun parseInput(input: String) = input.split(",").map { it.toInt() }
 

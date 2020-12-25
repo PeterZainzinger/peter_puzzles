@@ -1,24 +1,26 @@
-package y2019
+package y2020
 
 import BaseTest
 import assertNumber
 import org.junit.jupiter.api.Test
 import shared.splitLines
 
-class Y2019Day1Test : BaseTest<List<Int>>(2019, 1) {
+class Y2020Day14Test : BaseTest<List<Int>>(2020, 1) {
 
     override fun parseInput(input: String) = input.splitLines().map { it.toInt() }
 
     @Test
     fun part1() {
         val input = getInput()
-        assertNumber(3452245, input.map { Aoc2019D1.fuelWithFuel(it, false) }.sum())
+        // val res = 0
+        //assertNumber(, res)
     }
 
     @Test
     fun part2() {
         val input = getInput()
-        assertNumber(5175499, input.map { Aoc2019D1.fuelWithFuel(it, true) }.sum())
+        // val res = 0
+        //assertNumber(, res)
     }
 
 }

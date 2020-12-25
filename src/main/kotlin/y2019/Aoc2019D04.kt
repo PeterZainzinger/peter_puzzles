@@ -1,4 +1,4 @@
-object Aoc2019D4 {
+object Aoc2019D04 {
 
     fun searchPasswordInRange(range: IntRange): List<Int> =
         range

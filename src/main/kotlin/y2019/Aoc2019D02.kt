@@ -1,6 +1,6 @@
 package y2019
 
-object Aoc2019D2 {
+object Aoc2019D02 {
 
     fun executeIntCode(input: List<Int>): List<Int> {
         var currentIndex = 0;

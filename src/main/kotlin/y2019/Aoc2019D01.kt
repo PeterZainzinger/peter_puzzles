@@ -2,7 +2,7 @@ package y2019
 
 import kotlin.math.floor
 
-object Aoc2019D1 {
+object Aoc2019D01 {
 
     fun fuelWithFuel(input: Int, include: Boolean): Int {
         val res = floor(input / 3.0).toInt() - 2

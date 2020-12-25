@@ -3,7 +3,7 @@ package y2019
 import shared.Point
 import shared.then
 
-object Aoc2019D3 {
+object Aoc2019D03 {
     class WireEdge(
         private val x: Int,
         private val y: Int,
