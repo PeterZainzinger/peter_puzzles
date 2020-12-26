@@ -13,9 +13,10 @@
       in {
         devShell = pkgs.mkShell {
           buildInputs = with pkgs; [ myjava jetbrains.idea-ultimate ];
+          nativeBuildInputs = with pkgs; [ openblas gfortran lapack ];
           shellHook = ''
             export JAVA_HOME=${myjava}
-          '';
+                      '';
         };
       });
 }

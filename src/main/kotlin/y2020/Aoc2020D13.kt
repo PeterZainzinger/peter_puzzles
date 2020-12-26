@@ -1,5 +1,6 @@
 package y2020
 
+import shared.chineseRemainder
 import shared.gcdExt
 import shared.lcm
 
@@ -33,32 +34,12 @@ object Aoc2020D13 {
                 else -> null
             }
         }
-
         val timesWithOffsets = scheduleWithHoles.mapIndexed { index, i ->
             when (i) {
                 null -> null
-                else -> i to index
+                else -> -index to i
             }
         }.filterNotNull()
-        // PART 2
-        // https://de.wikipedia.org/wiki/Chinesischer_Restsatz ftw!
-        val M = timesWithOffsets.fold(1L, { acc, new -> lcm(acc, (new.first).toLong()) })
-        val res = timesWithOffsets.map { (m_i, a_i) ->
-            val M_i = M / m_i
-            val (_, r_i, s_i) = gcdExt(m_i.toLong(), M_i)
-            val e_i = s_i * M_i
-            a_i.toLong() * e_i
-        }.sum()
-        var resmod = res
-        if (res < 0) {
-            while (resmod + M < 0) {
-                resmod += M
-            }
-        } else {
-            while (resmod > 0) {
-                resmod -= M
-            }
-        }
-        return -resmod
+        return chineseRemainder(timesWithOffsets)
     }
 }

@@ -1,8 +1,8 @@
 package y2020
 
-object Aoc2020D06 {
+import shared.alphabet
 
-    private val alphabet = "abcdefghijklmniopqrstuvwxyz".toSet()
+object Aoc2020D06 {
 
     private fun charactersOfAnswers(
         input: List<List<String>>,
