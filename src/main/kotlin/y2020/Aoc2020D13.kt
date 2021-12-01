@@ -23,7 +23,7 @@ object Aoc2020D13 {
             .map { interval ->
                 interval to interval - (arrival % interval)
             }
-            .minBy { it.second }!!
+            .minByOrNull { it.second }!!
         return busId * offset
     }
 

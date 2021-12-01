@@ -29,8 +29,8 @@ object Aoc2020D05 {
 
     fun exercise2(input: List<Line>): Set<Int> {
         val allIds = input.map { it.seatID() }
-        val min = allIds.min()!!
-        val max = allIds.max()!!
+        val min = allIds.minOrNull()!!
+        val max = allIds.maxOrNull()!!
         return (min..max).toSet().minus(allIds)
     }
 }

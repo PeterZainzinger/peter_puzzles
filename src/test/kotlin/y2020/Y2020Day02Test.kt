@@ -15,7 +15,8 @@ class Y2020Day02Test : BaseTest<List<Aoc2020D02.PasswordLine>>(2020, 2) {
             start = Integer.parseInt(numbersSplitted[0]),
             end = Integer.parseInt(numbersSplitted[1]),
             letter = firstSplitted[1].toCharArray().first(),
-            password = splitted[1].strip()
+            //password = splitted[1].strip()
+            password = splitted[1]
         )
     }
 

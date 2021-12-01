@@ -9,10 +9,10 @@
           system = system;
           config = { allowUnfree = true; };
         };
-        myjava = pkgs.jetbrains.jdk;
+        myjava = pkgs.openjdk;
       in {
         devShell = pkgs.mkShell {
-          buildInputs = with pkgs; [ myjava jetbrains.idea-ultimate ];
+          buildInputs = with pkgs; [ myjava nodejs ];
           nativeBuildInputs = with pkgs; [ openblas gfortran lapack ];
           shellHook = ''
             export JAVA_HOME=${myjava}

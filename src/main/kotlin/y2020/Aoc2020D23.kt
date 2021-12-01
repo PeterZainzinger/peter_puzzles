@@ -5,8 +5,8 @@ object Aoc2020D23 {
         val list = CircularList(input)
         var i = 0
         var currentCup = list.start
-        val min = input.min()!!
-        val max = input.max()!!
+        val min = input.minOrNull()!!
+        val max = input.maxOrNull()!!
         while (i < loops) {
             val removed = list.removeNNodesAfter(currentCup, 3)
             val removedValues = removed.valuesAfter()

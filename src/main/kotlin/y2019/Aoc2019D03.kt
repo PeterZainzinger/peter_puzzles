@@ -15,7 +15,7 @@ object Aoc2019D03 {
     fun energyEffiecientPoint(inputA: List<WireEdge>, inputB: List<WireEdge>): Int {
         val (intersects, a, b) = intersectionPoints(inputA, inputB)
         return intersects.map { (a.indexOf(it) to b.indexOf(it)) }.filterNot { (x, y) -> x == 0 || y == 0 }
-            .map { it.first + it.second }.min()!!
+            .map { it.first + it.second }.minOrNull()!!
     }
 
     fun closesIntersectionPoint(inputA: List<WireEdge>, inputB: List<WireEdge>): Point {

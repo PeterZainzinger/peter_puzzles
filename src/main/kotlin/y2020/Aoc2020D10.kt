@@ -2,7 +2,7 @@ package y2020
 
 object Aoc2020D10 {
     fun part1(input: List<Int>): Int {
-        val internal = input.max()!! + 3
+        val internal = input.maxOrNull()!! + 3
         val inputWithStart = (listOf(0) + input)
         val diffs = inputWithStart.mapIndexed { index, i ->
             when (index) {
@@ -17,7 +17,7 @@ object Aoc2020D10 {
 
     fun countArrangements(input: List<Int>) = allArrangements(
         0,
-        options = input + listOf(input.max()!! + 3),
+        options = input + listOf(input.maxOrNull()!! + 3),
         mutableMapOf()
     )
 

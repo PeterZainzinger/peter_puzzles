@@ -43,7 +43,7 @@ class Y2020Day23Test : BaseTest<List<Int>>(2020, 23) {
     @Test
     fun part2() {
         val inputStart = getInput()
-        val inputStartMax = inputStart.max()!!
+        val inputStartMax = inputStart.maxOrNull()!!
         val input = (inputStart + (inputStartMax + 1..1000000)).toMutableList()
         assertNumber(683486010900L, find2AfterProduct(runRound(input, 10000000)))
     }
