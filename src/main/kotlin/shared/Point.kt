@@ -16,3 +16,14 @@ data class Point(val x: Int, val y: Int) {
 
     operator fun times(value: Int) = Point(x * value, y * value)
 }
+
+
+data class Point3(val x: Int, val y: Int, val z: Int) {
+    companion object {
+        val zero = Point3(0, 0,0)
+    }
+
+    operator fun plus(other: Point3) = Point3(x + other.x, y + other.y, z + other.z)
+
+    operator fun times(value: Int) = Point3(x * value, y * value, z * value)
+}
