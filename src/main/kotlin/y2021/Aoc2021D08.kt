@@ -1,8 +1,9 @@
 package y2021
 
+fun String.splitChars() = split("").filter { it.isNotBlank() }
+
 object Aoc2021D08 {
 
-    private fun String.splitChars() = split("").filter { it.isNotBlank() }
 
     data class Line(val signals: List<String>, val output: List<String>) {
         companion object {
@@ -29,7 +30,8 @@ object Aoc2021D08 {
         9 to "abcdfg",
     )
 
-    private val mappingInverse: Map<Set<String>, Int> = mappingReal.entries.map { it.value.splitChars().toSet() to it.key }.toMap()
+    private val mappingInverse: Map<Set<String>, Int> =
+        mappingReal.entries.map { it.value.splitChars().toSet() to it.key }.toMap()
     private val allCombinations = mappingReal.values.toList().map { it.splitChars().toSet() }.toSet()
 
 
