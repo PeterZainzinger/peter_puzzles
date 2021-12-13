@@ -24,3 +24,4 @@ abstract class BaseTest<T>(
 
 fun assertNumber(should: Int, actual: Int) = assertEquals(should, actual)
 fun assertNumber(should: Long, actual: Long) = assertEquals(should, actual)
+fun assertString(should: String, actual: String) = assertEquals(should, actual)
