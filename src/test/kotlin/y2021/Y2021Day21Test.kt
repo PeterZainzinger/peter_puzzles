@@ -7,7 +7,7 @@ import shared.Point3
 import shared.splitLines
 import kotlin.math.max
 
-class Y2021Day21Test : BaseTest<Aoc2021D21.GameState>(2021, 20) {
+class Y2021Day21Test : BaseTest<Aoc2021D21.GameState>(2021, 21) {
 
     @Test
     fun part1() {
